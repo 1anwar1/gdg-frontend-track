@@ -3,31 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Campus Code Club</title>
   </head>
   <body>
     <header>
       <nav>
-        <p>Campus Code Club</p>
-        <p>Schedule</p>
-        <p>Speakers</p>
-        <p>Join</p>
-        <p>Contact</p>
+          <h4>Campus Code Club</h4>
+          <ul class="nav-list">
+            <li><a class="nav-links button" href="#schedule">Schedule</a></li>
+            <li><a class="nav-links button" href="#speakers">Speakers</a></li>
+            <li><a class="nav-links button" href="#hero">Join</a></li>
+            <li><a class="nav-links button" href="#message-form">Contact</a></li>
+          </ul>
+        
       </nav>
-      <section class="hero">
+      <section class="hero container">
         <h1>Build Night</h1>
         <p>
           An evening of live coding, snacks and friendly help for first-time web
           builders.
         </p>
-        <p>Friday evening | Room 204</p>
-        <p>Reserve my seat</p>
+        <h5>Friday evening | Room 204</h5>
+        <a href="" class="button reserve-button">Reserve my seat</a>
       </section>
     </header>
 
     <main>
-      <section class="info">
-        <section class="schedule">
+      <section class="info container">
+        <section id="schedule" class="schedule section-container">
           <h3>Schedule</h3>
           <p>Doors open and setup heelp</p>
           <p>Live demo: a web page from scratch</p>
@@ -35,19 +39,24 @@
           <p>Show and tell</p>
         </section>
 
-        <section class="speakers">
+        <section id="speakers" class="speakers section-container">
           <h3>Speakers</h3>
-          <h4>Priya N.</h4>
-          <p>Frontend mentor. Loves tidy CSS.</p>
-
-          <h4>Marcus L.</h4>
-          <p>Accessibilty fan. Tests with a keyboard.</p>
-
-          <h4>Aiko T.</h4>
-          <p>Design student. Collects colour palettes.</p>
+          <div class="speaker-names">
+          <div>
+            <h4>Priya N.</h4>
+            <p>Frontend mentor. Loves tidy CSS.</p>
+          </div>
+          <div>
+            <h4>Marcus L.</h4>
+            <p>Accessibilty fan. Tests with a keyboard.</p>
+          </div>
+          <div class="aiko">
+            <h4>Aiko T.</h4>
+            <p>Design student. Collects colour palettes.</p>
+          </div></div>
         </section>
 
-        <section class="good-to-know">
+        <section id="good-to-know" class="good-to-know section-container">
           <h3>Good to know</h3>
           <ul>
             <li>Bring your laptop</li>
@@ -58,33 +67,29 @@
         </section>
       </section>
 
-      <section class="cta">
+      <section class="cta section-container">
         <h2>Save your seat</h2>
         <p>Seats are limited, so reserve yours today.</p>
-        <button>Reserve my seat</button>
+        <a href="" class="button cta-button">Reserve my seat</a>
       </section>
 
-      <section class="contact">
-        <section class="alex-card">
-          <h1>AM</h1>
+      <section class="contact section-container">
+        <section class="alex-card container">
+          <h1 class="icon">AM</h1>
           <h2>Alex Morgan</h2>
-          <p>Frontend Developer</p>
-          <p>
-            Building friendly, accessible websites. Currently learning CSS with
-            GDG on Campus.
-          </p>
-          <button>Say hello</button>
+          <small>Frontend Developer</small>
+          <p>Building friendly, accessible websites. Currently learning CSS with GDG on Campus.</p>
+          <a href="" class="button hello-button">Say hello</a>
         </section>
 
-        <section class="message-form">
-          <form action="/message" method="post">
+          <form id="message-form" class="message-form container" action="/message" method="post">
             <h2>Send Alex a message</h2>
             <label for="username">Your name</label>
-            <input type="text" name="username" id="username" required />
+            <input class="inputs" type="text" name="username" id="username" required />
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
+            <input class="inputs" type="email" name="email" id="email" required />
             <label for="message">Message</label>
-            <textarea name="message" id="message" rows="3" required></textarea>
+            <textarea class="inputs" name="message" id="message" rows="5" required></textarea>
 
             <button type="submit">Send message</button>
           </form>
