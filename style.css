@@ -38,6 +38,7 @@ a::before {
   border: 3px solid #9f86c0;
   border-radius: 0.5rem;
   box-shadow: -4px 4px 0px #c9a9f6;
+  font-weight: bold;
 
 }
 a:hover {
