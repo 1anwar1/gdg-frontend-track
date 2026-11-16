@@ -18,13 +18,13 @@
           </ul>
         
       </nav>
-      <section class="hero container">
+      <section id="hero" class="hero container">
         <h1>Build Night</h1>
         <p>
           An evening of live coding, snacks and friendly help for first-time web
           builders.
         </p>
-        <h5>Friday evening | Room 204</h5>
+        <p class="hero-date">Friday evening | Room 204<p>
         <a href="" class="button reserve-button">Reserve my seat</a>
       </section>
     </header>
@@ -32,7 +32,7 @@
     <main>
       <section class="info container">
         <section id="schedule" class="schedule section-container">
-          <h3>Schedule</h3>
+          <h2>Schedule</h2>
           <p>Doors open and setup heelp</p>
           <p>Live demo: a web page from scratch</p>
           <p>Pair building time</p>
@@ -40,7 +40,7 @@
         </section>
 
         <section id="speakers" class="speakers section-container">
-          <h3>Speakers</h3>
+          <h2>Speakers</h2>
           <div class="speaker-names">
           <div>
             <h4>Priya N.</h4>
@@ -56,30 +56,30 @@
           </div></div>
         </section>
 
-        <section id="good-to-know" class="good-to-know section-container">
-          <h3>Good to know</h3>
+        <aside id="good-to-know" class="good-to-know section-container">
+          <h2>Good to know</h2>
           <ul>
             <li>Bring your laptop</li>
             <li>VS Code and Chrome installed</li>
             <li>Snacks provided</li>
             <li>Beginners welcome</li>
           </ul>
-        </section>
+        </aside>
       </section>
 
       <section class="cta section-container">
         <h2>Save your seat</h2>
         <p>Seats are limited, so reserve yours today.</p>
-        <a href="" class="button cta-button">Reserve my seat</a>
+        <a href="#hero" class="button cta-button">Reserve my seat</a>
       </section>
 
       <section class="contact section-container">
         <section class="alex-card container">
-          <h1 class="icon">AM</h1>
+          <div class="icon">AM</div>
           <h2>Alex Morgan</h2>
           <small>Frontend Developer</small>
           <p>Building friendly, accessible websites. Currently learning CSS with GDG on Campus.</p>
-          <a href="" class="button hello-button">Say hello</a>
+          <a href="#message-form" class="button hello-button">Say hello</a>
         </section>
 
           <form id="message-form" class="message-form container" action="/message" method="post">
@@ -91,10 +91,11 @@
             <label for="message">Message</label>
             <textarea class="inputs" name="message" id="message" rows="5" required></textarea>
 
-            <button type="submit">Send message</button>
+            <button class="button" type="submit">Send message</button>
           </form>
-        </section>
       </section>
     </main>
+    <footer>
+    </footer>
   </body>
 </html>

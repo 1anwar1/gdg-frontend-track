@@ -30,6 +30,9 @@ a{
   color: var(--BLUE);
   transition: 0.3s ease;
 }
+.nav-links:focus-visible{
+  outline: 3px solid var(--ORANGE);
+}
 
 
 .container {
@@ -41,7 +44,7 @@ a{
 
 header {
   color: white;
-  height: 70vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   background: linear-gradient(140deg, var(--BLUE), var(--GREEN));
@@ -70,16 +73,21 @@ nav h4 {
 .hero h1 {
   font-size: 2.7em;
 }
+.hero-date{
+  font-weight: bold;
+}
 
 .nav-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   list-style: none;
   gap: 1rem;
   font-size: 0.95em;
 }
 
 .button{
+  cursor: pointer;
     border-radius: 2rem;
     font-weight: bold;
     font-size: 0.85em;
@@ -88,6 +96,9 @@ nav h4 {
 .button:hover{
   transform: scale(1.1);
   transition: 0.3s ease;
+}
+.button:focus-visible{
+  outline: 3px solid var(--ORANGE);
 }
 .reserve-button{
     background-color: var(--ORANGE);
@@ -179,6 +190,7 @@ main{
   border-radius: 0.8rem;
 }
 .icon{
+  font-size: 4rem;
   color: white;
   max-width: fit-content;
   padding: 2rem;
@@ -195,7 +207,7 @@ small{
 
 .hello-button{
   background-color: var(--BLUE);
-  padding: 0.7rem 7rem;
+  padding: 0.7rem 5rem;
 }
 
 .message-form{
@@ -215,6 +227,10 @@ small{
   border: 2px solid;
   border-radius: 0.3rem;
   min-height: 3rem;
+}
+.inputs:focus-visible{
+  outline: 3px solid var(--BLUE);
+  border-color: var(--BLUE);
 }
 button{
   padding: 1rem 1.5rem;
