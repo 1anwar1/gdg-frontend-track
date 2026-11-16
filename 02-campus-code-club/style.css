@@ -55,12 +55,10 @@ nav {
   flex-direction: column;
   align-items: flex-start;
   min-height: 9rem;
-  gap: 1rem;
+  gap: 2rem;
   padding: 1.2rem 1rem;
 }
-nav h4 {
-  height: 50px;
-}
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -69,6 +67,7 @@ nav h4 {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  padding: 3rem;
 }
 .hero h1 {
   font-size: 2.7em;
@@ -80,10 +79,19 @@ nav h4 {
 .nav-list {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   list-style: none;
   gap: 1rem;
   font-size: 0.95em;
+}
+.brand{
+  font-size: 1.4rem;
+}
+span{
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .button{
@@ -207,7 +215,7 @@ small{
 
 .hello-button{
   background-color: var(--BLUE);
-  padding: 0.7rem 5rem;
+  padding: 0.7rem 2.5rem;
 }
 
 .message-form{
@@ -249,19 +257,18 @@ button{
     max-width: 1000px;
   
   }
-  nav h4{
-    max-height: min-content;
-  }
   nav{
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     flex-wrap: nowrap;
     min-height: 3rem;
 
   }
   .nav-list{
-     font-size: 2rem;
+     font-size: 1rem;
+  }
+  .brand{
+     max-height: 3rem;
   }
   .button{
     font-size: 1rem;
@@ -297,6 +304,7 @@ button{
   .alex-card{
     display: grid;
     max-width: 50rem;
+    text-align: left;
   }
   .icon{
     grid-column: 1;
