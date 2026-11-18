@@ -1,0 +1,67 @@
+:root{
+  --WHITE: #f5f0e8;
+  --LIGHTGREY : #9f9f9f;
+  --GREY : #2c2c2e;
+  --BLACK : #1c1c1e;
+  --GOLD : #d18f5a;
+  --MINT : #668866;
+  --PINK : #bf7575;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  list-style: none;
+}
+.dot-list{
+  list-style-type: disc;
+}
+.dot-list li::marker{
+  color: green;
+}
+
+.container {
+  max-width: 768px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#nav-btn{
+  display: none;
+}
+ .sidebar {
+    position: fixed;
+    /* width: 240px; */
+    height: 100vh;
+    background: var(--GREY);
+    color: var(--LIGHTGREY);
+    padding: 1rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1 ;
+  }
+  .menu-btn {
+    position: fixed;
+    margin: 1rem 0  0 1rem;
+    padding: 0.5rem 0.8rem;
+    background: var(--GREY);
+    cursor: pointer;
+    border-radius: 0.7rem;
+    z-index: 2;
+  }
+
+   #nav-btn:checked ~ .sidebar { transform: translateX(0); }
+   
+
+@media (min-width: 768px){
+    .sidebar{
+      transform: translateX(0);
+    }
+}

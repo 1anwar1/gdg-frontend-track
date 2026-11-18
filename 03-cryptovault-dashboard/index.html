@@ -1,0 +1,1280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Crypto Vault</title>
+  </head>
+  <body>
+    <input type="checkbox" id="nav-btn" />
+    <label for="nav-btn" class="menu-btn"
+      ><svg
+        width="30"
+        height="30"
+        viewBox="0 0 48 48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+        <path
+          d="M7.94977 11.9498H39.9498"
+          stroke="var(--WHITE)"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7.94977 23.9498H39.9498"
+          stroke="var(--WHITE)"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M7.94977 35.9498H39.9498"
+          stroke="var(--WHITE)"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </label>
+    <label for="nav-btn" class="overlay"></label>
+    <nav class="sidebar">
+      <div class="container">
+        <div class="sidebar-title">
+          <div class="icon">CV</div>
+          <div>CryptoVault</div>
+        </div>
+
+        <div class="sidebar-small-title">MAIN MENU</div>
+        <a href="#" class="sidebar-item dashboard">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5.5 2.75A2.75 2.75 0 0 0 2.75 5.5v3a2.75 2.75 0 0 0 2.75 2.75h3a2.75 2.75 0 0 0 2.75-2.75v-3A2.75 2.75 0 0 0 8.5 2.75h-3ZM4.25 5.5c0-.69.56-1.25 1.25-1.25h3c.69 0 1.25.56 1.25 1.25v3c0 .69-.56 1.25-1.25 1.25h-3c-.69 0-1.25-.56-1.25-1.25v-3Zm1.25 7.25a2.75 2.75 0 0 0-2.75 2.75v3a2.75 2.75 0 0 0 2.75 2.75h3a2.75 2.75 0 0 0 2.75-2.75v-3a2.75 2.75 0 0 0-2.75-2.75h-3ZM4.25 15.5c0-.69.56-1.25 1.25-1.25h3c.69 0 1.25.56 1.25 1.25v3c0 .69-.56 1.25-1.25 1.25h-3c-.69 0-1.25-.56-1.25-1.25v-3Zm8.5-10a2.75 2.75 0 0 1 2.75-2.75h3a2.75 2.75 0 0 1 2.75 2.75v3a2.75 2.75 0 0 1-2.75 2.75h-3a2.75 2.75 0 0 1-2.75-2.75v-3Zm2.75-1.25c-.69 0-1.25.56-1.25 1.25v3c0 .69.56 1.25 1.25 1.25h3c.69 0 1.25-.56 1.25-1.25v-3c0-.69-.56-1.25-1.25-1.25h-3Zm0 8.5a2.75 2.75 0 0 0-2.75 2.75v3a2.75 2.75 0 0 0 2.75 2.75h3a2.75 2.75 0 0 0 2.75-2.75v-3a2.75 2.75 0 0 0-2.75-2.75h-3Zm-1.25 2.75c0-.69.56-1.25 1.25-1.25h3c.69 0 1.25.56 1.25 1.25v3c0 .69-.56 1.25-1.25 1.25h-3c-.69 0-1.25-.56-1.25-1.25v-3Z"
+            />
+          </svg>
+          <div class="sidebar-item-title">Dashboard</div>
+        </a>
+        <a href="#" class="sidebar-item market">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            version="1.1"
+            x="0px"
+            y="0px"
+            viewBox="0 0 100 100"
+            enable-background="new 0 0 100 100"
+            xml:space="preserve"
+          >
+            <polygon
+              points="100.109,99.708 0.109,99.708 0.109,-0.289 3.775,-0.289 3.775,96.043 100.109,96.043 "
+            ></polygon>
+            <polygon
+              points="92.329,32.811 89.185,7.804 69.101,23.028 77.349,26.502 68.293,48.025 55.871,33.653 42.902,58.314 29.888,45.724   15.038,79.441 21.652,82.352 32.316,58.129 44.803,70.216 57.336,46.391 70.435,61.551 84.009,29.305 "
+            ></polygon>
+          </svg>
+          <div class="sidebar-item-title">Markets</div>
+        </a>
+        <a href="#" class="sidebar-item wallet">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 256 256"
+            fill="currentColor"
+          >
+            <path
+              d="M208,50H48A22,22,0,0,0,26,72V184a22,22,0,0,0,22,22H208a22,22,0,0,0,22-22V72A22,22,0,0,0,208,50ZM38,94H218v20H160a6,6,0,0,0-6,6,26,26,0,0,1-52,0,6,6,0,0,0-6-6H38ZM48,62H208a10,10,0,0,1,10,10V82H38V72A10,10,0,0,1,48,62ZM208,194H48a10,10,0,0,1-10-10V126H90.47a38,38,0,0,0,75.06,0H218v58A10,10,0,0,1,208,194Z"
+            />
+          </svg>
+          <div class="sidebar-item-title">Wallet</div>
+        </a>
+
+        <div class="sidebar-small-title">ACOUNT</div>
+        <a href="#" class="sidebar-item settings">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+            data-slot="icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9"
+            />
+          </svg>
+          <div class="sidebar-item-title">Settings</div>
+        </a>
+
+        <hr />
+
+        <div class="sidebar-item">
+          <label class="switch">
+            <span>
+              <?xml version="1.0" encoding="UTF-8"?>
+              <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                width="24"
+                height="24"
+                viewBox="0 0 128 128"
+                enable-background="new 0 0 128 128"
+                xml:space="preserve"
+              >
+                <g>
+                  <g>
+                    <path
+                      d="M64,20c2.211,0,4-1.789,4-4V8c0-2.211-1.789-4-4-4s-4,1.789-4,4v8C60,18.211,61.789,20,64,20z M64,108
+			c-2.211,0-4,1.789-4,4v8c0,2.211,1.789,4,4,4s4-1.789,4-4v-8C68,109.789,66.211,108,64,108z M120,60h-8c-2.211,0-4,1.789-4,4
+			s1.789,4,4,4h8c2.211,0,4-1.789,4-4S122.211,60,120,60z M16,60H8c-2.211,0-4,1.789-4,4s1.789,4,4,4h8c2.211,0,4-1.789,4-4
+			S18.211,60,16,60z M100.77,21.574l-5.656,5.656c-1.563,1.563-1.563,4.094,0,5.656s4.094,1.563,5.656,0l5.656-5.656
+			c1.563-1.563,1.563-4.094,0-5.656S102.332,20.012,100.77,21.574z M27.23,95.113l-5.656,5.656c-1.563,1.563-1.563,4.094,0,5.656
+			s4.094,1.563,5.656,0l5.656-5.656c1.563-1.563,1.563-4.094,0-5.656S28.793,93.551,27.23,95.113z M27.23,32.887
+			c1.563,1.563,4.094,1.563,5.656,0s1.563-4.094,0-5.656l-5.656-5.656c-1.563-1.563-4.094-1.563-5.656,0s-1.563,4.094,0,5.656
+			L27.23,32.887z M100.77,95.113c-1.563-1.563-4.094-1.563-5.656,0s-1.563,4.094,0,5.656l5.656,5.656
+			c1.563,1.563,4.094,1.563,5.656,0s1.563-4.094,0-5.656L100.77,95.113z M64,28c-19.883,0-36,16.117-36,36s16.117,36,36,36
+			s36-16.117,36-36S83.883,28,64,28z M64,92c-15.438,0-28-12.563-28-28s12.563-28,28-28s28,12.563,28,28S79.438,92,64,92z"
+                    />
+                  </g>
+                </g>
+              </svg>
+              Light Mode</span
+            >
+            <input type="checkbox" name="checkbox" id="checkbox" />
+          </label>
+        </div>
+
+        <div class="sidebar-item">
+          <?xml version="1.0" ?><svg
+            fill="none"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H15"
+              stroke="black"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+            <path
+              d="M19 12L15 8M19 12L15 16M19 12H9"
+              stroke="black"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+          <div class="sidebar-item-title">Logout</div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <header class="container">
+        <h1>Dashboard</h1>
+        <p>Welcome back! Here's your portfolio overview.</p>
+        <div class="header-items">
+          <input type="search" id="search" placeholder="search" />
+          <?xml version="1.0" ?><svg
+            height="20"
+            width="20"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title />
+            <g id="bell">
+              <path
+                d="M29.78,24.37l-3.65-4.48L26,12a1,1,0,0,0,0-.16C24.85,5.58,21.21,2,16,2,10.5,2,6.08,6,5,11.82A1,1,0,0,0,5,12l-.13,8L2.14,24.48a1,1,0,0,0,0,1A1,1,0,0,0,3,26h9a4,4,0,0,0,8,0h9a1,1,0,0,0,.9-.57A1,1,0,0,0,29.78,24.37ZM16,28a2,2,0,0,1-2-2h4A2,2,0,0,1,16,28ZM4.77,24l2-3.24a1,1,0,0,0,.14-.5L7,12.1C7.91,7.25,11.52,4,16,4c5.63,0,7.43,5,8,8.1l.14,8.16a1,1,0,0,0,.22.62L26.9,24Z"
+              />
+            </g>
+          </svg>
+          <div class="profile-icon">AM</div>
+        </div>
+      </header>
+      <div class="container profile-overview">
+        <div class="title-row">
+          <h2>Profile Overview</h2>
+          <ul>
+            <li>1D</li>
+            <li>1W</li>
+            <li>1M</li>
+            <li>1Y</li>
+          </ul>
+        </div>
+        <svg
+          class="line-chart"
+          viewBox="0 0 700 200"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <defs>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color: #b87333"></stop>
+              <stop offset="50%" style="stop-color: #c9845a"></stop>
+              <stop offset="100%" style="stop-color: #daa57a"></stop>
+            </linearGradient>
+            <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop
+                offset="0%"
+                style="stop-color: #b87333; stop-opacity: 0.4"
+              ></stop>
+              <stop
+                offset="50%"
+                style="stop-color: #b87333; stop-opacity: 0.15"
+              ></stop>
+              <stop
+                offset="100%"
+                style="stop-color: #b87333; stop-opacity: 0"
+              ></stop>
+            </linearGradient>
+          </defs>
+          <!-- Grid Lines -->
+          <line
+            x1="0"
+            y1="40"
+            x2="700"
+            y2="40"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+          <line
+            x1="0"
+            y1="80"
+            x2="700"
+            y2="80"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+          <line
+            x1="0"
+            y1="120"
+            x2="700"
+            y2="120"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+          <line
+            x1="0"
+            y1="160"
+            x2="700"
+            y2="160"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+
+          <!-- Area Fill -->
+          <polygon
+            points="50,140 150,120 250,85 350,95 450,60 550,70 650,35 650,200 50,200"
+            fill="url(#areaGradient)"
+          ></polygon>
+
+          <!-- Line -->
+          <polyline
+            points="50,140 150,120 250,85 350,95 450,60 550,70 650,35"
+            fill="none"
+            stroke="url(#lineGradient)"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></polyline>
+
+          <!-- Dots -->
+          <circle cx="50" cy="140" r="5" fill="#b87333"></circle>
+          <circle cx="150" cy="120" r="5" fill="#b87333"></circle>
+          <circle cx="250" cy="85" r="5" fill="#b87333"></circle>
+          <circle cx="350" cy="95" r="5" fill="#b87333"></circle>
+          <circle cx="450" cy="60" r="5" fill="#b87333"></circle>
+          <circle cx="550" cy="70" r="5" fill="#b87333"></circle>
+          <circle cx="650" cy="35" r="5" fill="#b87333"></circle>
+        </svg>
+        <div class="profile-days">
+          <ul>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
+            <li>Sun</li>
+          </ul>
+        </div>
+      </div>
+      <div class="asset-perf container">
+        <div class="title-row">
+          <h2>Asset Performance</h2>
+          <ul>
+            <li>Week</li>
+            <li>Month</li>
+            <li>Year</li>
+          </ul>
+        </div>
+        <svg
+          class="bar-chart"
+          viewBox="0 0 700 200"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <defs>
+            <linearGradient id="barGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: #6b8e6b"></stop>
+              <stop offset="100%" style="stop-color: #5a7a5a"></stop>
+            </linearGradient>
+            <linearGradient id="barGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: #b87333"></stop>
+              <stop offset="100%" style="stop-color: #9a5f2a"></stop>
+            </linearGradient>
+            <linearGradient id="barGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: #c27878"></stop>
+              <stop offset="100%" style="stop-color: #a85f5f"></stop>
+            </linearGradient>
+          </defs>
+          <!-- Grid Lines -->
+          <line
+            x1="0"
+            y1="40"
+            x2="700"
+            y2="40"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+          <line
+            x1="0"
+            y1="80"
+            x2="700"
+            y2="80"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+          <line
+            x1="0"
+            y1="120"
+            x2="700"
+            y2="120"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+          <line
+            x1="0"
+            y1="160"
+            x2="700"
+            y2="160"
+            stroke="var(--chart-grid)"
+            stroke-width="1"
+          ></line>
+
+          <!-- Bars - BTC -->
+          <rect
+            x="40"
+            y="70"
+            width="60"
+            height="130"
+            rx="4"
+            fill="url(#barGradient1)"
+          ></rect>
+          <text
+            x="70"
+            y="190"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="12"
+          >
+            BTC
+          </text>
+          <text
+            x="70"
+            y="60"
+            text-anchor="middle"
+            fill="var(--gain)"
+            font-size="13"
+            font-weight="600"
+          >
+            +8.2%
+          </text>
+
+          <!-- Bars - ETH -->
+          <rect
+            x="130"
+            y="90"
+            width="60"
+            height="110"
+            rx="4"
+            fill="url(#barGradient1)"
+          ></rect>
+          <text
+            x="160"
+            y="190"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="12"
+          >
+            ETH
+          </text>
+          <text
+            x="160"
+            y="80"
+            text-anchor="middle"
+            fill="var(--gain)"
+            font-size="13"
+            font-weight="600"
+          >
+            +6.5%
+          </text>
+
+          <!-- Bars - USDT -->
+          <rect
+            x="220"
+            y="170"
+            width="60"
+            height="30"
+            rx="4"
+            fill="url(#barGradient2)"
+          ></rect>
+          <text
+            x="250"
+            y="190"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="12"
+          >
+            USDT
+          </text>
+          <text
+            x="250"
+            y="160"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="13"
+            font-weight="600"
+          >
+            +0.1%
+          </text>
+
+          <!-- Bars - SOL -->
+          <rect
+            x="310"
+            y="50"
+            width="60"
+            height="150"
+            rx="4"
+            fill="url(#barGradient1)"
+          ></rect>
+          <text
+            x="340"
+            y="190"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="12"
+          >
+            SOL
+          </text>
+          <text
+            x="340"
+            y="40"
+            text-anchor="middle"
+            fill="var(--gain)"
+            font-size="13"
+            font-weight="600"
+          >
+            +12.4%
+          </text>
+
+          <!-- Bars - BNB -->
+          <rect
+            x="400"
+            y="130"
+            width="60"
+            height="70"
+            rx="4"
+            fill="url(#barGradient2)"
+          ></rect>
+          <text
+            x="430"
+            y="190"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="12"
+          >
+            BNB
+          </text>
+          <text
+            x="430"
+            y="120"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="13"
+            font-weight="600"
+          >
+            +2.8%
+          </text>
+
+          <!-- Bars - ADA -->
+          <rect
+            x="490"
+            y="140"
+            width="60"
+            height="60"
+            rx="4"
+            fill="url(#barGradient2)"
+          ></rect>
+          <text
+            x="520"
+            y="190"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="12"
+          >
+            ADA
+          </text>
+          <text
+            x="520"
+            y="130"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="13"
+            font-weight="600"
+          >
+            +1.9%
+          </text>
+
+          <!-- Bars - XRP -->
+          <rect
+            x="580"
+            y="150"
+            width="60"
+            height="50"
+            rx="4"
+            fill="url(#barGradient3)"
+          ></rect>
+          <text
+            x="610"
+            y="190"
+            text-anchor="middle"
+            fill="var(--text-secondary)"
+            font-size="12"
+          >
+            XRP
+          </text>
+          <text
+            x="610"
+            y="140"
+            text-anchor="middle"
+            fill="var(--loss)"
+            font-size="13"
+            font-weight="600"
+          >
+            -1.2%
+          </text>
+
+          <!-- Baseline -->
+          <line
+            x1="0"
+            y1="200"
+            x2="700"
+            y2="200"
+            stroke="var(--border)"
+            stroke-width="2"
+          ></line>
+        </svg>
+      </div>
+      <div class="container btc/usd">
+        <div class="title-row">
+          <h2>BTC/USD</h2>
+          <span>$43,256.00</span>
+          <span>+2.34%</span>
+        </div>
+        <svg viewBox="0 0 400 150" preserveAspectRatio="none">
+          <line
+            x1="20"
+            y1="30"
+            x2="20"
+            y2="70"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="15" y="40" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="50"
+            y1="25"
+            x2="50"
+            y2="75"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="45" y="35" width="10" height="30" fill="#c27878"></rect>
+          <line
+            x1="80"
+            y1="35"
+            x2="80"
+            y2="85"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="75" y="45" width="10" height="25" fill="#6b8e6b"></rect>
+          <line
+            x1="110"
+            y1="20"
+            x2="110"
+            y2="60"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="105" y="30" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="140"
+            y1="30"
+            x2="140"
+            y2="80"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="135" y="40" width="10" height="30" fill="#c27878"></rect>
+          <line
+            x1="170"
+            y1="40"
+            x2="170"
+            y2="90"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="165" y="50" width="10" height="25" fill="#c27878"></rect>
+          <line
+            x1="200"
+            y1="35"
+            x2="200"
+            y2="75"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="195" y="45" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="230"
+            y1="25"
+            x2="230"
+            y2="65"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="225" y="35" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="260"
+            y1="30"
+            x2="260"
+            y2="70"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="255" y="40" width="10" height="15" fill="#6b8e6b"></rect>
+          <line
+            x1="290"
+            y1="20"
+            x2="290"
+            y2="55"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="285" y="30" width="10" height="15" fill="#c27878"></rect>
+          <line
+            x1="320"
+            y1="15"
+            x2="320"
+            y2="50"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="315" y="25" width="10" height="15" fill="#6b8e6b"></rect>
+          <line
+            x1="350"
+            y1="10"
+            x2="350"
+            y2="45"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="345" y="20" width="10" height="15" fill="#6b8e6b"></rect>
+          <line
+            x1="380"
+            y1="15"
+            x2="380"
+            y2="55"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="375" y="25" width="10" height="20" fill="#c27878"></rect>
+        </svg>
+      </div>
+      <div class="container eth/usd">
+        <div class="title-row">
+          <h2>ETH/USD</h2>
+          <span>$2,284.50</span>
+          <span>+1.87%</span>
+        </div>
+        <svg viewBox="0 0 400 150" preserveAspectRatio="none">
+          <line
+            x1="20"
+            y1="30"
+            x2="20"
+            y2="70"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="15" y="40" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="50"
+            y1="25"
+            x2="50"
+            y2="75"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="45" y="35" width="10" height="30" fill="#c27878"></rect>
+          <line
+            x1="80"
+            y1="35"
+            x2="80"
+            y2="85"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="75" y="45" width="10" height="25" fill="#6b8e6b"></rect>
+          <line
+            x1="110"
+            y1="20"
+            x2="110"
+            y2="60"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="105" y="30" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="140"
+            y1="30"
+            x2="140"
+            y2="80"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="135" y="40" width="10" height="30" fill="#c27878"></rect>
+          <line
+            x1="170"
+            y1="40"
+            x2="170"
+            y2="90"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="165" y="50" width="10" height="25" fill="#c27878"></rect>
+          <line
+            x1="200"
+            y1="35"
+            x2="200"
+            y2="75"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="195" y="45" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="230"
+            y1="25"
+            x2="230"
+            y2="65"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="225" y="35" width="10" height="20" fill="#6b8e6b"></rect>
+          <line
+            x1="260"
+            y1="30"
+            x2="260"
+            y2="70"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="255" y="40" width="10" height="15" fill="#6b8e6b"></rect>
+          <line
+            x1="290"
+            y1="20"
+            x2="290"
+            y2="55"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="285" y="30" width="10" height="15" fill="#c27878"></rect>
+          <line
+            x1="320"
+            y1="15"
+            x2="320"
+            y2="50"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="315" y="25" width="10" height="15" fill="#6b8e6b"></rect>
+          <line
+            x1="350"
+            y1="10"
+            x2="350"
+            y2="45"
+            stroke="#6b8e6b"
+            stroke-width="1"
+          ></line>
+          <rect x="345" y="20" width="10" height="15" fill="#6b8e6b"></rect>
+          <line
+            x1="380"
+            y1="15"
+            x2="380"
+            y2="55"
+            stroke="#c27878"
+            stroke-width="1"
+          ></line>
+          <rect x="375" y="25" width="10" height="20" fill="#c27878"></rect>
+        </svg>
+      </div>
+
+      <div class="container asset-allocation">
+        <h2>Asset Allocation</h2>
+        <svg class="donut-chart" viewBox="0 0 120 120">
+          <circle
+            cx="60"
+            cy="60"
+            r="45"
+            fill="none"
+            stroke="#f7931a"
+            stroke-width="18"
+            stroke-dasharray="113 170"
+            stroke-dashoffset="-42"
+            stroke-linecap="round"
+          ></circle>
+          <circle
+            cx="60"
+            cy="60"
+            r="45"
+            fill="none"
+            stroke="#627eea"
+            stroke-width="18"
+            stroke-dasharray="71 212"
+            stroke-dashoffset="-155"
+            stroke-linecap="round"
+          ></circle>
+          <circle
+            cx="60"
+            cy="60"
+            r="45"
+            fill="none"
+            stroke="#26a17b"
+            stroke-width="18"
+            stroke-dasharray="57 226"
+            stroke-dashoffset="-226"
+            stroke-linecap="round"
+          ></circle>
+          <circle
+            cx="60"
+            cy="60"
+            r="45"
+            fill="none"
+            stroke="#b87333"
+            stroke-width="18"
+            stroke-dasharray="42 241"
+            stroke-dashoffset="-283"
+            stroke-linecap="round"
+          ></circle>
+        </svg>
+        <ul class="dot-list">
+          <li>BTC 40%</li>
+          <li>ETH 25%</li>
+          <li>USDT 20%</li>
+          <li>Other 15%</li>
+        </ul>
+      </div>
+      <div class="container portfolio-health">
+        <h2>Portfolio Health</h2>
+        <svg class="gauge" viewBox="0 0 120 80">
+          <defs>
+            <linearGradient
+              id="gaugeGradient1"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" style="stop-color: #c27878"></stop>
+              <stop offset="50%" style="stop-color: #c9a878"></stop>
+              <stop offset="100%" style="stop-color: #6b8e6b"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M15,70 A45,45 0 0,1 105,70"
+            fill="none"
+            stroke="var(--border)"
+            stroke-width="10"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M15,70 A45,45 0 0,1 105,70"
+            fill="none"
+            stroke="url(#gaugeGradient1)"
+            stroke-width="10"
+            stroke-linecap="round"
+            stroke-dasharray="120 141"
+          ></path>
+          <circle cx="89" cy="45" r="6" fill="#6b8e6b"></circle>
+        </svg>
+        <span>85%</span>
+        <span>Excellent</span>
+      </div>
+      <div class="container risk-level">
+        <h2>Risk Level</h2>
+        <svg class="gauge" viewBox="0 0 120 80">
+          <defs>
+            <linearGradient
+              id="gaugeGradient2"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="0%"
+            >
+              <stop offset="0%" style="stop-color: #6b8e6b"></stop>
+              <stop offset="50%" style="stop-color: #c9a878"></stop>
+              <stop offset="100%" style="stop-color: #c27878"></stop>
+            </linearGradient>
+          </defs>
+          <path
+            d="M15,70 A45,45 0 0,1 105,70"
+            fill="none"
+            stroke="var(--border)"
+            stroke-width="10"
+            stroke-linecap="round"
+          ></path>
+          <path
+            d="M15,70 A45,45 0 0,1 105,70"
+            fill="none"
+            stroke="url(#gaugeGradient2)"
+            stroke-width="10"
+            stroke-linecap="round"
+            stroke-dasharray="50 141"
+          ></path>
+          <circle cx="52" cy="30" r="6" fill="#c9a878"></circle>
+        </svg>
+        <span>35%</span>
+        <span>Moderate</span>
+      </div>
+      <div class="container total-balance">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path>
+        </svg>
+        <div class="container balance-clmn">
+          <span class="small-title">Total Balance</span>
+          <span class="big-value">$84,254.32</span>
+          <span class="small-summary">+12.5% this month</span>
+        </div>
+      </div>
+      <div class="container total-profit">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+          <polyline points="17 6 23 6 23 12"></polyline>
+        </svg>
+        <div class="container balance-clmn">
+          <span class="small-title">Total Profit</span>
+          <span class="big-value">$12,847.00</span>
+          <span class="small-summary">+8.2% vs last week</span>
+        </div>
+      </div>
+      <div class="container pending-orders">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <div class="container balance-clmn">
+          <span class="small-title">Pending Orders</span>
+          <span class="big-value">7</span>
+          <span class="small-summary">3 buy, 4 sell</span>
+        </div>
+      </div>
+      <div class="container active-assets">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <line x1="12" y1="1" x2="12" y2="23"></line>
+          <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path>
+        </svg>
+        <div class="container balance-clmn">
+          <span class="small-title">Active Assets</span>
+          <span class="big-value">12</span>
+          <span class="small-summary">Across 4 wallets</span>
+        </div>
+      </div>
+
+      <div class="container recent-transactions">
+        <div class="title-row">
+          <h2>Recent Transactions</h2>
+          <span>view all</span>
+        </div>
+        <div class="btc-transactions">
+          <div class="transaction-line-row">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            </svg>
+            <div class="transaction-line-row-coloumn">
+              <span>Buy BTC</span>
+              <span>Today, 2:45 PM</span>
+            </div>
+            <span>+0.0234 BTC</span>
+          </div>
+        </div>
+        <div class="eth-transactions">
+          <div class="transaction-line-row">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+            </svg>
+            <div class="transaction-line-row-coloumn">
+              <span>Sell ETH</span>
+              <span>Today, 11:20 AM</span>
+            </div>
+            <span>-0.805 ETH</span>
+          </div>
+        </div>
+        <div class="usdt-transactions">
+          <div class="transaction-line-row">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="17 1 21 5 17 9"></polyline>
+              <path d="M3 11V9a4 4 0 014-4h14"></path>
+              <polyline points="7 23 3 19 7 15"></polyline>
+              <path d="M21 13v2a4 4 0 01-4 4H3"></path>
+            </svg>
+            <div class="transaction-line-row-coloumn">
+              <span>Transfer USDT</span>
+              <span>Yesterday</span>
+            </div>
+            <span>500 USDT</span>
+          </div>
+        </div>
+        <div class="sol-transactions">
+          <div class="transaction-line-row">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+            </svg>
+            <div class="transaction-line-row-coloumn">
+              <span>Buy SOL</span>
+              <span>Dec 28, 2025</span>
+            </div>
+            <span>+15.5 SOL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container top-movers">
+        <div class="title-row">
+          <h2>Top Movers</h2>
+          <ul>
+            <li><button>Gainers</button></li>
+            <li><button>Losers</button></li>
+          </ul>
+        </div>
+
+        <div class="solana top-gainers-row">
+          <span>1</span>
+          <span>◎</span>
+          <div class="top-gainers-row-grid">
+            <span>Solana</span>
+            <span>SOL</span>
+            <span>$98.42</span>
+            <span>+12.4%</span>
+          </div>
+        </div>
+
+        <div class="dogecoin top-gainers-row">
+          <span>2</span>
+          <span>Ð</span>
+          <div class="top-gainers-row-grid">
+            <span>Dogecoin</span>
+            <span>DOGE</span>
+            <span>$0.082</span>
+            <span>+8.5%</span>
+          </div>
+        </div>
+
+        <div class="bitcoin top-gainers-row">
+          <span>3</span>
+          <span>₿</span>
+          <div class="top-gainers-row-grid">
+            <span>Bitcoin</span>
+            <span>BTC</span>
+            <span>$43,256</span>
+            <span>+8.2%</span>
+          </div>
+        </div>
+
+        <div class="ethereum top-gainers-row">
+          <span>4</span>
+          <span>Ξ</span>
+          <div class="top-gainers-row-grid">
+            <span>Ethereum</span>
+            <span>ETH</span>
+            <span>$2,284</span>
+            <span>+6.5%</span>
+          </div>
+        </div>
+
+        <div class="cardano top-gainers-row">
+          <span>5</span>
+          <span>₳</span>
+          <div class="top-gainers-row-grid">
+            <span>Cardano</span>
+            <span>ADA</span>
+            <span>$0.52</span>
+            <span>+5.1%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container watchlist">
+        <div class="container title-row">
+          <h2>Watchlist</h2>
+          <button>+ Add</button>
+        </div>
+
+        <div class="container bitcoin-row">
+          <span>₿</span>
+          <div class="bitcoin-row-grid">
+            <span>Bitcoin</span>
+            <span>BTC</span>
+            <span>$43,256</span>
+            <span>+2.34%</span>
+          </div>
+          <svg class="sparkline" viewBox="0 0 50 20">
+                                <polyline points="0,15 8,12 16,14 24,8 32,10 40,5 50,7" fill="none" stroke="#6b8e6b" stroke-width="1.5"></polyline>
+          </svg>
+        </div>
+        <div class="container ethereum-row">
+  <span>Ξ</span>
+  <div class="ethereum-row-grid">
+    <span>Ethereum</span>
+    <span>ETH</span>
+    <span>$2,284</span>
+    <span>+1.87%</span>
+  </div>
+  <svg class="sparkline" viewBox="0 0 50 20">
+                                <polyline points="0,12 8,10 16,13 24,9 32,11 40,6 50,8" fill="none" stroke="#6b8e6b" stroke-width="1.5"></polyline>
+                            </svg>
+</div>
+
+<div class="container xrp-row">
+  <span>✕</span>
+  <div class="xrp-row-grid">
+    <span>XRP</span>
+    <span>XRP</span>
+    <span>$0.62</span>
+    <span>-1.24%</span>
+  </div>
+  <svg class="sparkline" viewBox="0 0 50 20">
+                                <polyline points="0,8 8,10 16,7 24,12 32,9 40,14 50,12" fill="none" stroke="#c27878" stroke-width="1.5"></polyline>
+                            </svg>
+</div>
+
+<div class="container dogecoin-row">
+  <span>Ð</span>
+  <div class="dogecoin-row-grid">
+    <span>Dogecoin</span>
+    <span>DOGE</span>
+    <span>$0.082</span>
+    <span>+5.67%</span>
+  </div>
+  <svg class="sparkline" viewBox="0 0 50 20">
+                                <polyline points="0,16 8,14 16,12 24,10 32,8 40,5 50,3" fill="none" stroke="#6b8e6b" stroke-width="1.5"></polyline>
+                            </svg>
+</div>
+
+<div class="container polkadot-row">
+  <span>●</span>
+  <div class="polkadot-row-grid">
+    <span>Polkadot</span>
+    <span>DOT</span>
+    <span>$7.45</span>
+    <span>+3.21%</span>
+  </div>
+  <svg class="sparkline" viewBox="0 0 50 20">
+                                <polyline points="0,14 8,12 16,15 24,10 32,8 40,6 50,9" fill="none" stroke="#6b8e6b" stroke-width="1.5"></polyline>
+  </svg>
+</div>
+
+      </div>
+
+    </main>
+    <hr>
+    <footer>
+      <small>Copyright © 2026 CryptoVault. Designed by TemplateMo</small>
+    </footer>
+  </body>
+</html>
