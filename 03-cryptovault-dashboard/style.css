@@ -9,6 +9,7 @@
   --PINK: #bf7575;
 }
 
+
 *,
 *::before,
 *::after {
@@ -30,33 +31,8 @@ main {
   padding-top: 4.8rem;
 }
 
-.welcome-msg {
-  padding: 1rem 0 1rem 0;
-  color: var(--LIGHTGREY);
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  color: var(--LIGHTGREY);
-  font-size: 0.8rem;
-  flex-wrap: wrap;
-}
-
-
-.container {
-  max-width: 768px;
-  padding: 0 1rem;
-  margin: 0 auto;
-  width: 100%;
-}
-.header-items {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  flex-wrap: wrap;
+a{
+ text-decoration: none;
 }
 
 #search {
@@ -89,16 +65,20 @@ ul {
   display: none;
 }
 .sidebar {
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  /* width: 240px; */
   height: 100vh;
   background: var(--GREY);
-  color: var(--LIGHTGREY);
+  color: var(--MIDGREY);
   padding: 1rem;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
   z-index: 1;
+  gap: 1rem;
+   box-shadow: 4px 0 24px rgba(0, 0, 0, 0.25);
 }
+
 .menu-btn {
   position: fixed;
   margin: 1rem 0 0 1rem;
@@ -112,6 +92,77 @@ ul {
 #nav-btn:checked ~ .sidebar {
   transform: translateX(0);
 }
+
+.sidebar-title{
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--WHITE);
+  font-weight: bolder;
+  font-size: 1.4rem;
+}
+.sidebar-icon{
+  padding: 0.5rem;
+  background: linear-gradient(135deg, #b87333 0%, #d4945a 50%, #c9845a 100%);
+  color: var(--BLACK);
+  border-radius: 0.5rem;
+}
+
+.sidebar a {
+display: flex;
+flex-direction: row;
+}
+
+.sidebar-item{
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--LIGHTGREY);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.dashboard{
+  color: var(--BLACK);
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #b87333 0%, #d4945a 50%, #c9845a 100%);
+}
+
+
+.welcome-msg {
+  padding: 1rem 0 1rem 0;
+  color: var(--LIGHTGREY);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: var(--LIGHTGREY);
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+}
+
+
+.container {
+  max-width: 768px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+.header-items {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+
 
 
 .title-row{
