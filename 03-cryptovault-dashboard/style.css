@@ -541,8 +541,10 @@ footer{
   main{
     display: grid;
     padding-left: 230px;
+    padding-top: 2rem;
   }
   header{
+
     display: flex;
     flex-direction: row;
     align-items: center;
