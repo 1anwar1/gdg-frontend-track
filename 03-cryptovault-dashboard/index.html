@@ -43,7 +43,7 @@
     <label for="nav-btn" class="overlay"></label>
     <nav class="sidebar">
         <div class="sidebar-title">
-          <div class="sidebar-icon">CV</div>
+          <div class="colored-icon">CV</div>
           <div>CryptoVault</div>
         </div>
 
@@ -180,9 +180,10 @@
     </nav>
     <main>
       <header class="container">
+        <div>
         <h1>Dashboard</h1>
         <p class="welcome-msg">Welcome back! Here's your portfolio overview.</p>
-        <div class="header-items">
+        </div><div class="header-items">
           <input type="search" id="search" placeholder=" 🔍︎  Search..." />
           <button class="noti-btn"><svg class="noti-icon"
             fill="currentColor"
@@ -198,16 +199,21 @@
               />
             </g>
           </svg></button>
-          
-
-          <div class="profile-icon">AM</div>
+          <div class="alex-profile">
+            <div class="colored-icon">AM</div>
+            <div class="alex-profile-hidden">
+              <span>Alex Morgan</span>
+              <small>Pro Trader</small>
+            </div>
+          </div>
         </div>
       </header>
+      <div class="container cards main-cards">
       <div class="container card profile-overview">
         <div class="title-row">
           <h2>Profile Overview</h2>
           <ul>
-            <li>1D</li>
+            <li class="colored-text">1D</li>
             <li>1W</li>
             <li>1M</li>
             <li>1Y</li>
@@ -314,7 +320,7 @@
         <div class="title-row">
           <h2>Asset Performance</h2>
           <ul>
-            <li>Week</li>
+            <li class="colored-text">Week</li>
             <li>Month</li>
             <li>Year</li>
           </ul>
@@ -586,7 +592,7 @@
           ></line>
         </svg>
       </div>
-      <div class="container card btc/usd">
+      <div class="container card btc-usd">
         <div class="title-row">
           <h2>BTC/USD</h2>
           <div class="card-nums">
@@ -715,7 +721,7 @@
           <rect x="375" y="25" width="10" height="20" fill="#c27878"></rect>
         </svg>
       </div>
-      <div class="container card eth/usd">
+      <div class="container card eth-usd">
         <div class="title-row">
           <h2>ETH/USD</h2>
           <div class="card-nums">
@@ -843,9 +849,12 @@
           <rect x="375" y="25" width="10" height="20" fill="#c27878"></rect>
         </svg>
       </div>
+    </div>
 
+    <div class="container  cards second-cards">
       <div class="container card asset-allocation">
-        <h2>Asset Allocation</h2>
+        <h2 >Asset Allocation</h2>
+        <div class="asset-info">
         <svg class="donut-chart" viewBox="0 0 120 120">
           <circle
             cx="60"
@@ -893,11 +902,11 @@
           ></circle>
         </svg>
         <ul class="dot-list">
-          <li>BTC 40%</li>
-          <li>ETH 25%</li>
-          <li>USDT 20%</li>
-          <li>Other 15%</li>
-        </ul>
+          <li><span class="btc-dot dot">⏺</span> BTC 40%</li>
+          <li><span class="eth-dot dot">⏺</span> ETH 25%</li>
+          <li><span class="usdt-dot dot">⏺</span> USDT 20%</li>
+          <li><span class="other-dot dot">⏺</span> Other 15%</li>
+        </ul></div>
       </div>
       <div class="container card portfolio-health">
         <h2>Portfolio Health</h2>
@@ -970,7 +979,8 @@
         </svg>
         <span class="card-percent">35%</span>
         <small>Moderate</small>
-      </div>
+      </div></div>
+      <div class="container cards third-cards">
       <div class="container card card-row total-balance">
         <div class="card-icon"><svg
           width="24"
@@ -1036,8 +1046,9 @@
           <span class="big-value">12</span>
           <small class="small-summary">Across 4 wallets</small>
         </div>
-      </div>
+      </div></div>
 
+      <div class="container cards fourth-cards">
       <div class="container card recent-transactions">
         <div class="title-row">
           <h2>Recent Transactions</h2>
@@ -1132,7 +1143,7 @@
         <div class="title-row">
           <h2>Top Movers</h2>
           <ul>
-            <li><button class="gainers-btn">Gainers</button></li>
+            <li><button class="colored-text">Gainers</button></li>
             <li><button class="losers-btn">Losers</button></li>
           </ul>
         </div>
@@ -1278,7 +1289,7 @@
       <polyline points="0,14 8,12 16,15 24,10 32,8 40,6 50,9" fill="none" stroke="#6b8e6b" stroke-width="1.5"></polyline>
     </svg>
   </div>
-</div>
+</div></div>
 
     </main>
     <hr>
